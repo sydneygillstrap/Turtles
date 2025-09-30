@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kemp's Ridley Sea Turtle Presentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .slide {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        .slide.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-4">
+
+    <div id="presentation-container" class="w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <div class="p-8 md:p-12 min-h-[600px] flex flex-col justify-between">
+            <!-- Slides will be injected here by JS -->
+
+            <!-- Slide 1: Title -->
+            <div id="slide-1" class="slide active">
+                <div class="flex flex-col items-center justify-center text-center h-full">
+                    <h1 class="text-4xl md:text-6xl font-bold text-gray-800">Kemp's Ridley Sea Turtle</h1>
+                    <p class="text-2xl md:text-3xl text-gray-600 mt-2">(Lepidochelys kempii)</p>
+                    <p class="mt-8 text-lg text-gray-500">Endangered Species Profile for Alabama High School AI Class</p>
+                    <img src="https://media.fisheries.noaa.gov/2021-02/kemps-ridley-sea-turtle-noaa-crp.jpg?itok=2-1J22kQ" alt="A Kemp's Ridley Sea Turtle swimming in the Gulf of Mexico" class="mt-8 rounded-lg shadow-lg w-full max-w-lg object-cover h-64">
+                </div>
+            </div>
+
+            <!-- Slide 2: Species Info -->
+            <div id="slide-2" class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Species Information</h2>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <p class="text-lg text-gray-700 mb-6">The Kemp's Ridley is the smallest and most critically endangered sea turtle in the world. Its diet consists mainly of crabs, but it also eats fish, jellyfish, and mollusks.</p>
+                        <ul class="text-lg text-gray-700 space-y-3 list-disc list-inside bg-gray-50 p-4 rounded-lg">
+                            <li><strong>Size:</strong> Adults average 2 feet in length.</li>
+                            <li><strong>Weight:</strong> 70-100 pounds.</li>
+                            <li><strong>Color:</strong> Olive-gray shell with a creamy white bottom shell.</li>
+                            <li><strong>Lifespan:</strong> Estimated to be at least 30 years, possibly up to 50.</li>
+                        </ul>
+                    </div>
+                    <img src="https://www.seaturtlecamp.com/wp-content/uploads/2023/10/kemps-ridley.jpg" alt="Close up of a Kemp's Ridley Sea Turtle" class="rounded-lg shadow-md w-full h-64 object-cover">
+                </div>
+            </div>
+
+            <!-- Slide 3: Habitat -->
+            <div id="slide-3" class="slide">
+                 <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Habitat: Where They Live</h2>
+                 <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <img src="https://oceanservice.noaa.gov/facts/sargassum-what-is-it.jpg" alt="Sargassum seaweed mat" class="rounded-lg shadow-md w-full h-72 object-cover order-2 md:order-1">
+                    <div class="order-1 md:order-2">
+                        <p class="text-lg text-gray-700 mb-4">Kemp's Ridley turtles prefer shallow, coastal waters of the Gulf of Mexico and the Atlantic Ocean.</p>
+                        <p class="text-lg text-gray-700">They are often found in bays, lagoons, and estuaries where their primary food source, blue crabs, are abundant. Younger turtles often use mats of sargassum (a type of seaweed) for shelter and food.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Alabama Presence -->
+            <div id="slide-4" class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Found in Alabama</h2>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                     <div>
+                        <p class="text-lg text-gray-700 mb-4">In Alabama, Kemp's Ridley sea turtles are occasional visitors to coastal waters, including Mobile Bay.</p>
+                        <p class="text-lg text-gray-700">While most nest in Mexico, a few nests have been documented on Alabama's beaches, particularly in the Bon Secour National Wildlife Refuge. Their presence here is often noted through stranding data.</p>
+                    </div>
+                    <img src="https://www.gulfshores.com/sites/default/files/2023-01/beach-chair-and-umbrella_0.jpg" alt="Alabama's coastline" class="rounded-lg shadow-md w-full h-72 object-cover">
+                </div>
+            </div>
+            
+            <!-- Slide 5: Nesting Habits -->
+            <div id="slide-5" class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Nesting Habits & "Arribada"</h2>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <img src="https://www.texastribune.org/wp-content/uploads/2022/05/2022_05_13_Kemps_Ridley_Turtle_Nesting_KA_02.jpg" alt="An arribada of Kemp's Ridley turtles nesting in Mexico" class="rounded-lg shadow-md w-full h-72 object-cover order-2 md:order-1">
+                    <div class="order-1 md:order-2">
+                        <p class="text-lg text-gray-700 mb-4">Kemp's Ridleys have a unique synchronized nesting behavior called an "arribada" (Spanish for "arrival"), where large groups nest at the same time.</p>
+                        <ul class="text-lg text-gray-700 space-y-2 list-disc list-inside bg-gray-50 p-4 rounded-lg">
+                            <li><strong>Season:</strong> April to July</li>
+                            <li><strong>Time:</strong> Primarily during the day</li>
+                            <li><strong>Clutch Size:</strong> ~100 eggs per nest</li>
+                            <li><strong>Incubation:</strong> 45-60 days</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: Movement & Migration -->
+            <div id="slide-6" class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">A Life of Travel</h2>
+                 <div class="flex flex-col items-center">
+                    <p class="text-lg text-gray-700 mb-6 max-w-2xl text-center">Kemp's Ridley turtles are highly migratory. After hatching, they travel from nesting beaches to foraging grounds throughout the Gulf of Mexico and up the Atlantic coast, returning to the area where they were born to reproduce.</p>
+                    <img src="https://www.fisheries.noaa.gov/s3/styles/full_width/s3/2022-07/kemps_ridley_turtle_range_map.png" alt="Range map of Kemp's Ridley sea turtle" class="rounded-lg shadow-md w-full max-w-xl">
+                 </div>
+            </div>
+
+            <!-- Slide 7: Tracking & Footprints -->
+            <div id="slide-7" class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Tracking and Footprints</h2>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                     <div>
+                        <p class="text-lg text-gray-700 mb-4">Tracking sea turtles is crucial for conservation. The tracks, or "crawl," they leave in the sand are a key indicator for researchers.</p>
+                        <p class="text-lg text-gray-700">The crawl of a Kemp's Ridley is an alternating pattern, as they move their front flippers one at a time, which helps in identifying the species.</p>
+                    </div>
+                    <img src="https://myfwc.com/media/28587/seaturtletracks.jpg" alt="The alternating flipper tracks of a Kemp's Ridley sea turtle" class="rounded-lg shadow-md w-full h-72 object-cover">
+                </div>
+            </div>
+
+            <!-- Slide 8: Resources -->
+            <div id="slide-8" class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Additional Resources</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-700 mb-3">Useful Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="https://www.outdooralabama.com/turtles/kemps-ridley-sea-turtle" target="_blank" class="text-blue-600 hover:underline">Outdoor Alabama</a></li>
+                            <li><a href="https://www.joinacf.org/about-sea-turtles" target="_blank" class="text-blue-600 hover:underline">Alabama Coastal Foundation</a></li>
+                            <li><a href="https://www.fws.gov/species/kemps-ridley-sea-turtle-lepidochelys-kempii" target="_blank" class="text-blue-600 hover:underline">U.S. Fish & Wildlife Service</a></li>
+                            <li><a href="https://www.nwf.org/Educational-Resources/Wildlife-Guide/Reptiles/Sea-Turtles/Kemps-Ridley-Sea-Turtle" target="_blank" class="text-blue-600 hover:underline">National Wildlife Federation</a></li>
+                            <li><a href="https://www.joinacf.org/stb" target="_blank" class="text-blue-600 hover:underline">Share the Beach</a></li>
+                        </ul>
+                    </div>
+                     <div>
+                        <h3 class="text-2xl font-semibold text-gray-700 mb-3">Videos</h3>
+                        <ul class="space-y-2">
+                            <li><a href="https://www.youtube.com/watch?v=f_sNBJ25s2w" target="_blank" class="text-blue-600 hover:underline">National Geographic</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=n9841w2i5i4" target="_blank" class="text-blue-600 hover:underline">Texas Parks and Wildlife</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=F08DoJ1yG-Y" target="_blank" class="text-blue-600 hover:underline">Saving the Kemp's Ridley</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="bg-gray-800 p-4 flex justify-between items-center">
+            <button id="prevBtn" class="bg-gray-600 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-lg transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+                Previous
+            </button>
+            <div id="slide-counter" class="text-white">Slide 1 / 8</div>
+            <button id="nextBtn" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+                Next
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let currentSlide = 1;
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const slideCounter = document.getElementById('slide-counter');
+
+            function showSlide(n) {
+                // Hide all slides
+                slides.forEach(slide => slide.classList.remove('active'));
+                
+                // Show the target slide
+                const targetSlide = document.getElementById(`slide-${n}`);
+                if (targetSlide) {
+                    targetSlide.classList.add('active');
+                }
+                
+                // Update counter
+                slideCounter.textContent = `Slide ${n} / ${totalSlides}`;
+
+                // Update button states
+                prevBtn.disabled = n === 1;
+                nextBtn.disabled = n === totalSlides;
+            }
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < totalSlides) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 1) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            });
+
+            // Initialize the first slide
+            showSlide(currentSlide);
+        });
+    </script>
+
+</body>
+</html>
+
