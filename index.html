@@ -1,1 +1,329 @@
-Hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endangered Turtles of Alabama</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style for the active tab */
+        .tab-active {
+            background-color: #10B981; /* Emerald-500 */
+            color: white;
+            border-color: #10B981;
+        }
+        /* Simple transition for content fade-in */
+        .content-section {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .content-active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-emerald-700">Endangered Turtles of Alabama</h1>
+            <p class="text-lg text-gray-600 mt-2">An Interactive Guide for Student Research</p>
+        </header>
+
+        <!-- Tab Navigation -->
+        <nav class="flex flex-wrap justify-center border-b-2 border-gray-200 mb-8">
+            <button data-target="gopher-tortoise" class="tab-button tab-active text-lg font-semibold py-3 px-6 border-b-4 border-transparent hover:bg-emerald-500 hover:text-white transition duration-300 rounded-t-lg">Gopher Tortoise</button>
+            <button data-target="flattened-musk" class="tab-button text-lg font-semibold py-3 px-6 border-b-4 border-transparent hover:bg-emerald-500 hover:text-white transition duration-300 rounded-t-lg">Flattened Musk Turtle</button>
+            <button data-target="alabama-red-bellied" class="tab-button text-lg font-semibold py-3 px-6 border-b-4 border-transparent hover:bg-emerald-500 hover:text-white transition duration-300 rounded-t-lg">Alabama Red-bellied Turtle</button>
+            <button data-target="kemps-ridley" class="tab-button text-lg font-semibold py-3 px-6 border-b-4 border-transparent hover:bg-emerald-500 hover:text-white transition duration-300 rounded-t-lg">Kemp's Ridley Turtle</button>
+            <button data-target="loggerhead" class="tab-button text-lg font-semibold py-3 px-6 border-b-4 border-transparent hover:bg-emerald-500 hover:text-white transition duration-300 rounded-t-lg">Loggerhead Turtle</button>
+        </nav>
+
+        <!-- Content Sections -->
+        <main>
+            <!-- Gopher Tortoise Section -->
+            <section id="gopher-tortoise" class="content-section content-active">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
+                    <h2 class="text-3xl font-bold text-emerald-600 mb-1">Gopher Tortoise</h2>
+                    <p class="text-xl italic text-gray-500 mb-6">Gopherus polyphemus</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                         <img src="https://images.unsplash.com/photo-1606555239992-3582a79a1a95?q=80&w=800" onerror="this.onerror=null;this.src='https://placehold.co/800x600/A7F3D0/14532D?text=Gopher+Tortoise';" alt="Gopher Tortoise" class="rounded-lg shadow-md object-cover w-full h-64">
+                         <img src="https://placehold.co/800x600/A7F3D0/14532D?text=Tortoise+Burrow" alt="Gopher Tortoise Burrow" class="rounded-lg shadow-md object-cover w-full h-64">
+                         <img src="https://placehold.co/800x600/A7F3D0/14532D?text=Longleaf+Pine+Habitat" alt="Longleaf Pine Sandhill Habitat" class="rounded-lg shadow-md object-cover w-full h-64">
+                    </div>
+
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">About the Species</h3>
+                            <p>The Gopher Tortoise is a keystone species, meaning its presence is vital to the ecosystem's health. They are renowned for digging deep burrows—up to 40 feet long—that provide essential shelter for over 350 other species, including snakes, frogs, and insects. These tortoises are herbivores, primarily feeding on grasses and legumes.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">Habitat & Range in Alabama</h3>
+                                <p>They thrive in well-drained, sandy soils found in longleaf pine sandhills and coastal dunes. In Alabama, their range is concentrated in the southern counties of the Coastal Plain, including Mobile, Baldwin, Washington, and Covington counties.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">Nesting & Locomotion</h3>
+                                <p>From May to July, females lay 3-15 eggs in a nest dug into the sandy mound (apron) at the entrance of their burrow. As terrestrial animals, they are slow-moving, using their powerful, shovel-like front legs for digging and their stout, elephantine back legs for walking.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">Tracking: Footprints</h3>
+                            <p class="mb-4">Gopher Tortoise tracks are distinctive. Look for a central drag mark left by the plastron (bottom shell) between the prints. Their front feet have four toes adapted for digging, while their back feet are more rounded. The sand apron around a burrow is the best place to find clear tracks.</p>
+                            <div class="bg-gray-50 p-4 rounded-lg flex justify-center">
+                                <img src="https://placehold.co/600x300/E5E7EB/4B5563?text=Gopher+Tortoise+Footprints+Illustration" alt="Gopher Tortoise Footprint Illustration" class="rounded-md shadow">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">Resources</h3>
+                            <ul class="list-disc list-inside space-y-2 text-emerald-800">
+                                <li><a href="https://www.outdooralabama.com/reptiles/gopher-tortoise" target="_blank" class="hover:underline">Alabama Dept. of Conservation and Natural Resources</a></li>
+                                <li><a href="https://www.fws.gov/species/gopher-tortoise-gopherus-polyphemus" target="_blank" class="hover:underline">U.S. Fish & Wildlife Service - Species Profile</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=kIG4bJ63a-E" target="_blank" class="hover:underline">Video: Gopher Tortoise, A Keystone Species (YouTube)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Flattened Musk Turtle Section -->
+            <section id="flattened-musk" class="content-section">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
+                    <h2 class="text-3xl font-bold text-emerald-600 mb-1">Flattened Musk Turtle</h2>
+                    <p class="text-xl italic text-gray-500 mb-6">Sternotherus depressus</p>
+                    
+                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                         <img src="https://placehold.co/800x600/A7F3D0/14532D?text=Flattened+Musk+Turtle" alt="Flattened Musk Turtle" class="rounded-lg shadow-md object-cover w-full h-64">
+                         <img src="https://placehold.co/800x600/A7F3D0/14532D?text=Rock+Crevice+in+Stream" alt="Rock Crevice in a Stream" class="rounded-lg shadow-md object-cover w-full h-64">
+                         <img src="https://placehold.co/800x600/A7F3D0/14532D?text=Warrior+River+Basin+Habitat" alt="Warrior River Basin Habitat" class="rounded-lg shadow-md object-cover w-full h-64">
+                    </div>
+
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">About the Species</h3>
+                            <p>This small aquatic turtle is named for its unusually flat shell, an adaptation that allows it to seek refuge from predators and strong currents by squeezing into tight crevices between rocks. They are endemic to Alabama, meaning they are found nowhere else in the world. They primarily feed on mollusks like snails and clams.</p>
+                        </div>
+
+                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">Habitat & Range in Alabama</h3>
+                                <p>The Flattened Musk Turtle is highly specialized, living only in the clear, clean, and permanent streams and rivers of the Warrior River Basin in north-central Alabama. This includes parts of counties like Blount, Cullman, Walker, and Jefferson. They require rocky bottoms and abundant basking sites.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">Nesting & Locomotion</h3>
+                                <p>Nesting occurs from April to July, with females laying 1-2 eggs in shallow nests along the stream bank, often hidden under leaf litter or in moss. As aquatic turtles, they are not strong swimmers but are excellent climbers, adept at moving over rocks and logs both in and out of the water.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">Tracking: Footprints</h3>
+                            <p class="mb-4">Tracking this species by footprints is extremely difficult due to their small size and aquatic nature. Tracks are rarely left, but if found in soft sand or mud near the water's edge, they would appear as small, delicate prints from their webbed feet. Your model might focus more on habitat indicators than footprints.</p>
+                            <div class="bg-gray-50 p-4 rounded-lg flex justify-center">
+                                <img src="https://placehold.co/600x300/E5E7EB/4B5563?text=Aquatic+Turtle+Footprint+(Illustrative)" alt="Flattened Musk Turtle Footprint Illustration" class="rounded-md shadow">
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">Resources</h3>
+                            <ul class="list-disc list-inside space-y-2 text-emerald-800">
+                                <li><a href="https://www.outdooralabama.com/reptiles/flattened-musk-turtle" target="_blank" class="hover:underline">Alabama Dept. of Conservation and Natural Resources</a></li>
+                                <li><a href="https://ecos.fws.gov/ecp/species/5431" target="_blank" class="hover:underline">U.S. Fish & Wildlife Service - Species Profile</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=1-3h64Rna4o" target="_blank" class="hover:underline">Video: Searching for Flattened Musk Turtles (YouTube)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Alabama Red-bellied Turtle Section -->
+            <section id="alabama-red-bellied" class="content-section">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
+                    <h2 class="text-3xl font-bold text-emerald-600 mb-1">Alabama Red-bellied Turtle</h2>
+                    <p class="text-xl italic text-gray-500 mb-6">Pseudemys alabamensis</p>
+                    
+                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                         <img src="https://placehold.co/800x600/A7F3D0/14532D?text=Alabama+Red-bellied+Turtle" alt="Alabama Red-bellied Turtle" class="rounded-lg shadow-md object-cover w-full h-64">
+                         <img src="https://placehold.co/800x600/A7F3D0/14532D?text=Red+Plastron+(Belly)" alt="Red Plastron (Belly)" class="rounded-lg shadow-md object-cover w-full h-64">
+                         <img src="https://placehold.co/800x600/A7F3D0/14532D?text=Mobile-Tensaw+Delta+Habitat" alt="Mobile-Tensaw Delta Habitat" class="rounded-lg shadow-md object-cover w-full h-64">
+                    </div>
+
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">About the Species</h3>
+                            <p>As Alabama's official state reptile, this large freshwater turtle is a symbol of the state's unique biodiversity. It is easily identified by its reddish-orange plastron (bottom shell) and a prominent notch at the tip of its upper jaw. They are primarily herbivorous, feeding on aquatic vegetation.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">Habitat & Range in Alabama</h3>
+                                <p>This turtle has a very restricted range, found almost exclusively in the fresh and brackish waters of the Mobile-Tensaw River Delta in Baldwin and Mobile counties. They depend on habitats with abundant submerged aquatic plants for food and open, sandy banks for nesting.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">Nesting & Locomotion</h3>
+                                <p>From May to July, females leave the water to find sunny, open sandbars to lay their eggs. They dig a nest and deposit around 4-9 eggs. These turtles are powerful swimmers. They spend much of their time basking on logs and riverbanks to regulate their body temperature.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">Tracking: Footprints</h3>
+                            <p class="mb-4">Like other large aquatic turtles, their tracks are most visible in soft mud or sand near nesting sites. The footprints will show impressions from their webbed feet, which they use for propulsion in the water. Claw marks may be visible at the tips of the prints. The trail of a nesting female leaving the water is a key sign to look for.</p>
+                            <div class="bg-gray-50 p-4 rounded-lg flex justify-center">
+                                <img src="https://placehold.co/600x300/E5E7EB/4B5563?text=Large+Webbed+Footprints+in+Sand" alt="Alabama Red-bellied Turtle Footprint Illustration" class="rounded-md shadow">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">Resources</h3>
+                            <ul class="list-disc list-inside space-y-2 text-emerald-800">
+                                <li><a href="https://www.outdooralabama.com/reptiles/alabama-red-bellied-turtle" target="_blank" class="hover:underline">Alabama Dept. of Conservation and Natural Resources</a></li>
+                                <li><a href="https://www.fws.gov/species/alabama-red-bellied-turtle-pseudemys-alabamensis" target="_blank" class="hover:underline">U.S. Fish & Wildlife Service - Species Profile</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=7hB65a9RZIU" target="_blank" class="hover:underline">Video: Alabama's State Reptile (YouTube)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Kemp's Ridley Turtle Section -->
+            <section id="kemps-ridley" class="content-section">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
+                    <h2 class="text-3xl font-bold text-emerald-600 mb-1">Kemp's Ridley Sea Turtle</h2>
+                    <p class="text-xl italic text-gray-500 mb-6">Lepidochelys kempii</p>
+                    
+                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                         <img src="https://placehold.co/800x600/A7F3D0/14532D?text=Kemp's+Ridley+Sea+Turtle" alt="Kemp's Ridley Sea Turtle" class="rounded-lg shadow-md object-cover w-full h-64">
+                         <img src="https://placehold.co/800x600/A7F3D0/14532D?text=Coastal+Waters+Habitat" alt="Coastal Waters Habitat" class="rounded-lg shadow-md object-cover w-full h-64">
+                         <img src="https://placehold.co/800x600/A7F3D0/14532D?text=Arribada+Nesting+Event" alt="Arribada Nesting Event" class="rounded-lg shadow-md object-cover w-full h-64">
+                    </div>
+
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">About the Species</h3>
+                            <p>The Kemp's Ridley is the world's most critically endangered sea turtle. It is also the smallest sea turtle, with adults averaging just 2 feet in length and weighing between 70-100 pounds. Their shell is often a distinctive olive-gray color. Their diet consists mainly of crabs, but they also eat fish and jellyfish.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">Habitat & Range in Alabama</h3>
+                                <p>They prefer the shallow, coastal waters of the Gulf of Mexico and the Atlantic Ocean. In Alabama, they are occasional visitors to our coastal waters, including Mobile Bay and the Mississippi Sound. Younger turtles often shelter and feed in floating mats of sargassum seaweed.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">Nesting & Locomotion</h3>
+                                <p>This species is famous for its unique, synchronized nesting behavior called an "arribada," where huge groups of females come ashore to nest at the same time, mostly during the day. They lay about 100 eggs per nest. As powerful swimmers, they navigate vast ocean distances.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">Tracking: Footprints</h3>
+                            <p class="mb-4">Sea turtle tracks, often called "crawls," are very distinctive on sandy beaches. Kemp's Ridleys create a symmetrical pattern with their front flippers moving at the same time. This results in parallel marks on either side of a central drag mark from their shell. Look for these patterns on Alabama's coastal beaches during nesting season.</p>
+                            <div class="bg-gray-50 p-4 rounded-lg flex justify-center">
+                                <img src="https://placehold.co/600x300/E5E7EB/4B5563?text=Symmetrical+Sea+Turtle+Crawl" alt="Kemp's Ridley Footprint Illustration" class="rounded-md shadow">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">Resources</h3>
+                            <ul class="list-disc list-inside space-y-2 text-emerald-800">
+                                <li><a href="https://www.fisheries.noaa.gov/species/kemps-ridley-turtle" target="_blank" class="hover:underline">NOAA Fisheries - Species Profile</a></li>
+                                <li><a href="https://www.fws.gov/species/kemps-ridley-sea-turtle-lepidochelys-kempii" target="_blank" class="hover:underline">U.S. Fish & Wildlife Service</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=f-cShActT8s" target="_blank" class="hover:underline">Video: Kemp's Ridley Arribada (YouTube)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Loggerhead Turtle Section -->
+            <section id="loggerhead" class="content-section">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
+                    <h2 class="text-3xl font-bold text-emerald-600 mb-1">Loggerhead Sea Turtle</h2>
+                    <p class="text-xl italic text-gray-500 mb-6">Caretta caretta</p>
+                    
+                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                         <img src="https://placehold.co/800x600/A7F3D0/14532D?text=Loggerhead+Sea+Turtle" alt="Loggerhead Sea Turtle" class="rounded-lg shadow-md object-cover w-full h-64">
+                         <img src="https://placehold.co/800x600/A7F3D0/14532D?text=Massive+Head+and+Jaws" alt="Loggerhead Powerful Jaws" class="rounded-lg shadow-md object-cover w-full h-64">
+                         <img src="https://placehold.co/800x600/A7F3D0/14532D?text=Alabama+Coastal+Beach+Nesting+Site" alt="Alabama Coastal Beach Nesting Site" class="rounded-lg shadow-md object-cover w-full h-64">
+                    </div>
+
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">About the Species</h3>
+                            <p>Loggerhead turtles are named for their massive heads and powerful jaws, which are perfectly adapted for crushing the shells of their prey like conchs and crabs. Adults can reach an average length of 3 feet and weigh between 170 to 350 pounds. They are the most common sea turtle to nest on Alabama's beaches.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">Habitat & Range in Alabama</h3>
+                                <p>Loggerheads are found in temperate and tropical waters worldwide. In Alabama, they are found nesting on the beaches of Baldwin and Mobile counties. Key nesting sites include the Bon Secour National Wildlife Refuge and Gulf Shores, where volunteers actively monitor and protect nests.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">Nesting & Locomotion</h3>
+                                <p>Nesting season runs from May to October. Females return to the same beaches where they were born to lay their eggs, typically at night. They dig a nest with their rear flippers and lay 100-120 eggs. The temperature of the sand determines the sex of the hatchlings. They are strong swimmers, migrating long distances.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">Tracking: Footprints</h3>
+                            <p class="mb-4">Loggerhead tracks are notable for their alternating pattern, as they move their front flippers one at a time, like a crawl. This creates a wavy, asymmetrical track in the sand. Due to their size, the tracks are quite wide (over 30 inches). No central drag mark from the shell is typically visible, unlike with other sea turtles.</p>
+                            <div class="bg-gray-50 p-4 rounded-lg flex justify-center">
+                                <img src="https://placehold.co/600x300/E5E7EB/4B5563?text=Asymmetrical+Sea+Turtle+Crawl" alt="Loggerhead Footprint Illustration" class="rounded-md shadow">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-700 border-b-2 border-emerald-200 pb-2 mb-3">Resources</h3>
+                            <ul class="list-disc list-inside space-y-2 text-emerald-800">
+                                <li><a href="https://www.fisheries.noaa.gov/species/loggerhead-turtle" target="_blank" class="hover:underline">NOAA Fisheries - Species Profile</a></li>
+                                 <li><a href="https://www.outdooralabama.com/reptiles/loggerhead-sea-turtle" target="_blank" class="hover:underline">Alabama Dept. of Conservation and Natural Resources</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=P-y41hVC84w" target="_blank" class="hover:underline">Video: Alabama Sea Turtle Conservation (YouTube)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab-button');
+            const contentSections = document.querySelectorAll('.content-section');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const target = tab.getAttribute('data-target');
+
+                    // Update tab styles
+                    tabs.forEach(t => t.classList.remove('tab-active'));
+                    tab.classList.add('tab-active');
+
+                    // Show/hide content
+                    contentSections.forEach(section => {
+                        if (section.id === target) {
+                            section.classList.add('content-active');
+                        } else {
+                            section.classList.remove('content-active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
